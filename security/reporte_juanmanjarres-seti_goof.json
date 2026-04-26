@@ -1,0 +1,69 @@
+{
+  "artefacto": {
+    "nombre": "juanmanjarres-seti/goof",
+    "tipo": "repository",
+    "ambiente": "develop",
+    "scanner": "fluid_attacks"
+  },
+  "resumen": {
+    "total": 2,
+    "critica": 0,
+    "alta": 1,
+    "media": 1,
+    "baja": 0
+  },
+  "vulnerabilidades": [
+    {
+      "id": "CVE-2022-41853",
+      "paquete": "hsqldb",
+      "version_instalada": "2.3.2",
+      "version_corregida": "2.7.1",
+      "severidad": "ALTA",
+      "titulo": "Those using java.sql.Statement or java.sql.PreparedStatement in hsqldb to process untrusted input may be vulnerable to a",
+      "score_cvss": 8.0,
+      "recomendacion": {
+        "accion": "Se agrega la dependencia explícita `org.hsqldb:hsqldb` en versión `2.7.1` al archivo `pom.xml` para remediar CVE-2022-41853.",
+        "pasos": [
+          "Se agrega la dependencia explícita `org.hsqldb:hsqldb` en versión `2.7.1` al archivo `pom.xml` para remediar CVE-2022-41853.",
+          "**Problema:** La versión `2.3.2` de HyperSQL Database (hsqldb) es vulnerable a ejecución remota de código (RCE) cuando se procesan sentencias SQL no confiables. La vulnerabilidad se debe al uso inseguro de reflexión Java (CWE-470), que permite a un atacante ejecutar código arbitrario a través de sentencias SQL manipuladas.",
+          "**Solución:** Se declara explícitamente la versión `2.7.1` de `org.hsqldb:hsqldb`, que incluye la corrección para esta vulnerabilidad. Al declarar la dependencia explícitamente, Maven utilizará esta versión segura en lugar de cualquier versión transitiva vulnerable que pudiera estar siendo resuelta.",
+          "**Impacto:** Cambio mínimo y no disruptivo. Solo actualiza la versión de la librería afectada a la versión segura recomendada por el proveedor."
+        ],
+        "esfuerzo": "BAJO",
+        "prioridad": 1,
+        "confianza_remediacion": 0.82
+      },
+      "files_involucrados": [
+        {
+          "ruta": "todolist/exploits/log4shell-server/pom.xml",
+          "analisis": "Archivo donde se aplica el parche de seguridad (version_bump)."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-15250",
+      "paquete": "junit",
+      "version_instalada": "4.12",
+      "version_corregida": "4.13.1",
+      "severidad": "MEDIA",
+      "titulo": "In JUnit4 from version 4.7 and before 4.13.1, the test rule TemporaryFolder contains a local information disclosure vuln",
+      "score_cvss": 4.4,
+      "recomendacion": {
+        "accion": "CVE-2020-15250 afecta a JUnit4 en versiones 4.7 hasta 4.13.0. La clase `TemporaryFolder` crea directorios temporales con permisos inseguros (world-readable en sistemas Unix/Linux), lo que permite a otros usuarios locales del sistema acceder al contenido de esos directorios y provocar una divulgación de información local (CWE-200, CWE-732).",
+        "pasos": [
+          "## Remediación CVE-2020-15250 — Actualización de JUnit a 4.13.1"
+        ],
+        "esfuerzo": "BAJO",
+        "prioridad": 2,
+        "confianza_remediacion": 0.82
+      },
+      "files_involucrados": [
+        {
+          "ruta": "todolist/exploits/log4shell-server/pom.xml",
+          "analisis": "Archivo donde se aplica el parche de seguridad (version_bump)."
+        }
+      ]
+    }
+  ],
+  "generado_en": "2026-04-26T22:36:23.591916Z"
+}
