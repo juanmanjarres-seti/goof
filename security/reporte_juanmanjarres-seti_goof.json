@@ -1,0 +1,258 @@
+{
+  "artefacto": {
+    "nombre": "juanmanjarres-seti/goof",
+    "tipo": "repository",
+    "ambiente": "develop",
+    "scanner": "fluid_attacks + osv"
+  },
+  "resumen": {
+    "total": 10,
+    "critica": 4,
+    "alta": 6,
+    "media": 0,
+    "baja": 0
+  },
+  "vulnerabilidades": [
+    {
+      "id": "CVE-2022-41853",
+      "paquete": "hsqldb",
+      "version_instalada": "2.3.2",
+      "version_corregida": "2.7.1",
+      "severidad": "ALTA",
+      "titulo": "Those using java.sql.Statement or java.sql.PreparedStatement in hsqldb to process untrusted input may be vulnerable to a",
+      "score_cvss": 8.0,
+      "recomendacion": {
+        "accion": "Upgrade org.hsqldb:hsqldb to version 2.7.1 or later.",
+        "pasos": [
+          "Upgrade org.hsqldb:hsqldb to version 2.7.1 or later."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 1,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia hsqldb==2.3.2."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-20433",
+      "paquete": "c3p0",
+      "version_instalada": "0.9.1.2",
+      "version_corregida": null,
+      "severidad": "CRITICA",
+      "titulo": "c3p0 0.9.5.2 allows remote attackers to conduct XML eXternal Entity (XXE) attacks via a crafted system ID",
+      "score_cvss": 9.8,
+      "recomendacion": {
+        "accion": "Evaluar actualización de c3p0 a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de c3p0 a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 2,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia c3p0==0.9.1.2."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-10683",
+      "paquete": "dom4j:dom4j",
+      "version_instalada": "1.6.1",
+      "version_corregida": "2.0.3",
+      "severidad": "CRITICA",
+      "titulo": "dom4j allows External Entities by default which might enable XXE attacks",
+      "score_cvss": 9.8,
+      "recomendacion": {
+        "accion": "Evaluar actualización de dom4j:dom4j a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de dom4j:dom4j a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 3,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia dom4j:dom4j==1.6.1."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-22965",
+      "paquete": "org.springframework:spring-beans",
+      "version_instalada": "3.2.6.RELEASE",
+      "version_corregida": "5.2.20.RELEASE",
+      "severidad": "CRITICA",
+      "titulo": "Remote Code Execution in Spring Framework",
+      "score_cvss": 9.8,
+      "recomendacion": {
+        "accion": "Evaluar actualización de org.springframework:spring-beans a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de org.springframework:spring-beans a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 4,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia org.springframework:spring-beans==3.2.6.RELEASE."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2015-5211",
+      "paquete": "org.springframework:spring-core",
+      "version_instalada": "3.2.6.RELEASE",
+      "version_corregida": "4.2.2",
+      "severidad": "CRITICA",
+      "titulo": "Files or Directories Accessible to External Parties in org.springframework:spring-core",
+      "score_cvss": 9.6,
+      "recomendacion": {
+        "accion": "Evaluar actualización de org.springframework:spring-core a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de org.springframework:spring-core a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 5,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia org.springframework:spring-core==3.2.6.RELEASE."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-5427",
+      "paquete": "c3p0",
+      "version_instalada": "0.9.1.2",
+      "version_corregida": null,
+      "severidad": "ALTA",
+      "titulo": "c3p0 version < 0.9.5.2 is susceptible to an XML External Entity (XXE) injection attack when loading connection pool conf",
+      "score_cvss": 7.5,
+      "recomendacion": {
+        "accion": "Evaluar actualización de c3p0 a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de c3p0 a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 6,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia c3p0==0.9.1.2."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-1000632",
+      "paquete": "dom4j:dom4j",
+      "version_instalada": "1.6.1",
+      "version_corregida": "2.0.3",
+      "severidad": "ALTA",
+      "titulo": "Dom4j contains a XML Injection vulnerability",
+      "score_cvss": 7.5,
+      "recomendacion": {
+        "accion": "Evaluar actualización de dom4j:dom4j a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de dom4j:dom4j a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 7,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia dom4j:dom4j==1.6.1."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-1272",
+      "paquete": "org.springframework:spring-core",
+      "version_instalada": "3.2.6.RELEASE",
+      "version_corregida": "4.3.15",
+      "severidad": "ALTA",
+      "titulo": "Possible privilege escalation in org.springframework:spring-core",
+      "score_cvss": 7.5,
+      "recomendacion": {
+        "accion": "Evaluar actualización de org.springframework:spring-core a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de org.springframework:spring-core a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 8,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia org.springframework:spring-core==3.2.6.RELEASE."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-5007",
+      "paquete": "org.springframework:spring-core",
+      "version_instalada": "3.2.6.RELEASE",
+      "version_corregida": "4.3.1",
+      "severidad": "ALTA",
+      "titulo": "Spring Security and Spring Framework may not recognize certain paths that should be protected",
+      "score_cvss": 7.5,
+      "recomendacion": {
+        "accion": "Evaluar actualización de org.springframework:spring-core a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de org.springframework:spring-core a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 9,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia org.springframework:spring-core==3.2.6.RELEASE."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-25638",
+      "paquete": "org.hibernate:hibernate-core",
+      "version_instalada": "4.3.7.Final",
+      "version_corregida": "5.4.24.Final",
+      "severidad": "ALTA",
+      "titulo": "SQL injection in hibernate-core",
+      "score_cvss": 7.4,
+      "recomendacion": {
+        "accion": "Evaluar actualización de org.hibernate:hibernate-core a una versión segura.",
+        "pasos": [
+          "Evaluar actualización de org.hibernate:hibernate-core a una versión segura."
+        ],
+        "esfuerzo": "MEDIO",
+        "prioridad": 10,
+        "confianza_remediacion": 0.3
+      },
+      "files_involucrados": [
+        {
+          "ruta": "/app/goof-develop/todolist/todolist-core/pom.xml",
+          "analisis": "Manifiesto donde se declara la dependencia org.hibernate:hibernate-core==4.3.7.Final."
+        }
+      ]
+    }
+  ],
+  "generado_en": "2026-04-26T22:56:08.250486Z"
+}
