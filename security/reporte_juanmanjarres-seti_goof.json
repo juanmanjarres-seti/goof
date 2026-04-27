@@ -1,0 +1,67 @@
+{
+  "artefacto": {
+    "nombre": "juanmanjarres-seti/goof",
+    "tipo": "repository",
+    "ambiente": "develop",
+    "scanner": "fluid_attacks + osv"
+  },
+  "resumen": {
+    "total": 2,
+    "critica": 0,
+    "alta": 1,
+    "media": 1,
+    "baja": 0
+  },
+  "vulnerabilidades": [
+    {
+      "id": "CVE-2022-41853",
+      "paquete": "hsqldb",
+      "version_instalada": "2.3.2",
+      "version_corregida": "2.7.1",
+      "severidad": "ALTA",
+      "titulo": "Those using java.sql.Statement or java.sql.PreparedStatement in hsqldb to process untrusted input may be vulnerable to a",
+      "score_cvss": 8.0,
+      "recomendacion": {
+        "accion": "La vulnerabilidad CVE-2022-41853 (CVSS 8.0 - HIGH) afecta a `org.hsqldb:hsqldb` en versiones anteriores a 2.7.1. Permite a un atacante ejecutar código remoto arbitrario (RCE) cuando se procesan entradas no confiables mediante `java.sql.Statement` o `java.sql.PreparedStatement`. La causa raíz (CWE-470) es que HSQLDB permitía invocar métodos Java estáticos arbitrarios a través de sentencias SQL maliciosas.",
+        "pasos": [
+          "## Remediación CVE-2022-41853 — Actualización de org.hsqldb:hsqldb a 2.7.1"
+        ],
+        "esfuerzo": "BAJO",
+        "prioridad": 1,
+        "confianza_remediacion": 0.88
+      },
+      "files_involucrados": [
+        {
+          "ruta": "todolist/exploits/log4shell-server/pom.xml",
+          "analisis": "Archivo donde se aplica el parche de seguridad (version_bump)."
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-15250",
+      "paquete": "junit:junit",
+      "version_instalada": "4.12",
+      "version_corregida": "4.13.1",
+      "severidad": "MEDIA",
+      "titulo": "TemporaryFolder on unix-like systems does not limit access to created files",
+      "score_cvss": 4.4,
+      "recomendacion": {
+        "accion": "La vulnerabilidad CVE-2020-15250 afecta a `junit:junit` versión 4.12. La clase `TemporaryFolder` de JUnit, al crear directorios y archivos temporales en sistemas Unix-like, no establece permisos restrictivos, dejando esos recursos accesibles para todos los usuarios del sistema (world-readable). Esto puede exponer información sensible procesada durante las pruebas (CWE-200) y constituye una asignación incorrecta de permisos (CWE-732).",
+        "pasos": [
+          "## Remediación CVE-2020-15250 — Actualización de junit a 4.13.1",
+          "Al declarar explícitamente esta versión, Maven resuelve el conflicto de versiones a favor de `4.13.1`, reemplazando cualquier versión vulnerable que pudiera llegar como dependencia transitiva."
+        ],
+        "esfuerzo": "BAJO",
+        "prioridad": 2,
+        "confianza_remediacion": 0.82
+      },
+      "files_involucrados": [
+        {
+          "ruta": "todolist/exploits/log4shell-server/pom.xml",
+          "analisis": "Archivo donde se aplica el parche de seguridad (version_bump)."
+        }
+      ]
+    }
+  ],
+  "generado_en": "2026-04-27T20:19:57.496273Z"
+}
